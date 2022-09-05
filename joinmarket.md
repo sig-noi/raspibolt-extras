@@ -14,7 +14,7 @@ Difficulty: Intermediate
 Status: Not tested v3
 {: .label .label-yellow }
 
-We set up [Joinmarket clientserver](https://github.com/JoinMarket-Org/joinmarket-clientserver){:target="blank"}, a ?? fully decentralized ?? marketplace for executing and providing liquidity to CoinJoin transactions. Run it and you can help improve the confidentiality and privacy of bitcoin transactions (and probably make a few sats while you're at it).
+We set up [Joinmarket clientserver](https://github.com/JoinMarket-Org/joinmarket-clientserver){:target="blank"}, a ?? fully decentralized ?? marketplace for executing and providing liquidity to CoinJoin transactions. Run it to help improve the confidentiality and privacy of bitcoin transactions (and probably make a few sats while you're at it).
 
 ---
 
