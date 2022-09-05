@@ -90,7 +90,7 @@ $ ln -s /data/joinmarket /home/joinmarket/.joinmarket
 
 ## Install JoinMarket
 
-* As user "joinmarket", download the latest release, checksums and signature. First check for the latest release on [Releases page] (https://github.com/JoinMarket-Org/joinmarket-clientserver/releases)
+* As user "joinmarket", download the latest release, checksums and signature. First check for the latest release on the [Releases page](https://github.com/JoinMarket-Org/joinmarket-clientserver/releases) and update version numbers as you go if needed.
 
 ``` 
 $ cd /tmp
@@ -186,7 +186,7 @@ $ . activate.sh
 
 ### Generate JoinMarket wallet 
 
-JoinMarket uses its own wallet. You can create one with or without a "two-factor mnemonic recovery phrase", which refers to a BIP39 passphrase. This is not required and adds complexity, though it may be desired for various security or backup reasons. A good article on the BIP39 passphrase can be found here https://www.blockplate.com/blogs/blockplate/what-is-a-bip39-passphrase.
+JoinMarket uses its own wallet. You can create one with or without a "two-factor mnemonic recovery phrase", which refers to a BIP39 passphrase. This is not required and adds complexity, though it may be desired for various security or backup reasons. A good article on the BIP39 passphrase can be found [here](https://www.blockplate.com/blogs/blockplate/what-is-a-bip39-passphrase).
 
 ```
 (jvmenv) $ python wallet-tool.py generate
@@ -258,12 +258,12 @@ JoinMarket wallet contains five separate sub-wallets (accounts) or pockets calle
 
 ### Fund your JoinMarket wallet
 
-If you plan to run JoinMarket as a Taker (paying fees to the network to mix coins with `tumbler` or `sendpayment`), read this about how to fund your wallet: https://github.com/JoinMarket-Org/joinmarket-clientserver/blob/master/docs/SOURCING-COMMITMENTS.md
+If you plan to run JoinMarket as a Taker (paying fees to the network to mix coins with `tumbler` or `sendpayment`), read [this]https://github.com/JoinMarket-Org/joinmarket-clientserver/blob/master/docs/SOURCING-COMMITMENTS.md about how to fund your wallet/
 
-If you plan to run JoinMarket as a Maker, read on about the Yield Generator.
+If you plan to run JoinMarket as a Maker, read on about the yield generator.
 
 
-### Running the yield generator bot
+### Run the yield generator bot
 
 Yield generator is a maker bot that provides liquidity to the JoinMarket, so that others (takers) can make CoinJoin with your funds, potentially paying you a small fee for the service. It is recommended to fund your JoinMarket wallet with at least 0.1 BTC to run the yield generator. The more funds you deposit in the wallet, the better the chance of participating in passive CoinJoin transactions. But don't be reckless! Remember this is a hot wallet, so security is not the same as with a hardware wallet or other cold storage.
 
@@ -334,14 +334,12 @@ Mixing maker and taker roles in a single wallet is actually good for your privac
 
 ### Running the tumbler
 
-Tumbler is a program that does series of CoinJoins with various amounts and timing between them, to completely break the link between different addresses. You can run yield generator to mix your coins slowly +/- fees or you can run tumbler to mix your coins faster while paying fees to the market makers (and miners).
-
-* See https://github.com/JoinMarket-Org/joinmarket-clientserver/blob/master/docs/tumblerguide.md
+Tumbler is a program that does series of CoinJoins with various amounts and timing between them, to completely break the link between different addresses. You can run yield generator to mix your coins slowly +/- fees or you can run tumbler to mix your coins faster while paying fees to the market makers (and miners). See https://github.com/JoinMarket-Org/joinmarket-clientserver/blob/master/docs/tumblerguide.md
 
 
 ### Other notes
 
-* Every time you disconnect from the RaspiBolt and connect again, if you are in a fresh session, before running any JoinMarket commands, you need to do the following from "joinmarket" user (or run the activate.sh script from the Install section above):
+Every time you disconnect from the RaspiBolt and connect again, if you are in a fresh session, before running any JoinMarket commands, you need to do the following from "joinmarket" user (or run the activate.sh script from the Install section above):
 ```
 $ cd /home/bitcoin/joinmarket
 $ source jmvenv/bin/activate
@@ -361,11 +359,15 @@ All this must be done from "joinmarket" user.
 
 * Stop yield generator bot, if it is running.
 
-* Remove existing JoinMarket symlink: `unlink /data/joinmarket`
+* Remove existing JoinMarket symlink.
+
+```
+unlink /data/joinmarket
+```
 
 * Download, verify, extract and install the JoinMarket as described in the [Install JoinMarket](#install-joinmarket) section of this guide.
 
-* Optionally delete old JoinMarket version directory to free up about 200 megabytes. (Don't worry, your wallet files are stored in /data/joinmarket/wallets.)
+* Optionally delete old JoinMarket version directory to free up about 200 megabytes.
 
 
 ### Useful links
