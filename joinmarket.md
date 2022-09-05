@@ -362,7 +362,7 @@ All this must be done from "joinmarket" user.
 * Remove existing JoinMarket symlink.
 
 ```
-unlink /data/joinmarket
+$ unlink /data/joinmarket
 ```
 
 * Download, verify, extract and install the JoinMarket as described in the [Install JoinMarket](#install-joinmarket) section of this guide.
