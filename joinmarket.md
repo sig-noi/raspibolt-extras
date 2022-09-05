@@ -258,7 +258,7 @@ JoinMarket wallet contains five separate sub-wallets (accounts) or pockets calle
 
 ### Fund your JoinMarket wallet
 
-If you plan to run JoinMarket as a Taker (paying fees to the network to mix coins with `tumbler` or `sendpayment`), read [this]https://github.com/JoinMarket-Org/joinmarket-clientserver/blob/master/docs/SOURCING-COMMITMENTS.md about how to fund your wallet/
+If you plan to run JoinMarket as a Taker (paying fees to the network to mix coins with `tumbler` or `sendpayment`), read [this](https://github.com/JoinMarket-Org/joinmarket-clientserver/blob/master/docs/SOURCING-COMMITMENTS.md) about how to fund your wallet.
 
 If you plan to run JoinMarket as a Maker, read on about the yield generator.
 
